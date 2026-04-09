@@ -165,5 +165,113 @@
     changeSlide(0);
   </script>
 
+  <!-- Products Section -->
+  <section class="products-page">
+
+    <!-- Category Tabs -->
+    <div class="categories">
+      <span>All</span>
+      <span>Chopping Boards</span>
+      <span>Pizza Board</span>
+      <span>Something</span>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-grid">
+
+      <!-- Product Item -->
+      <div class="product-card">
+        <div class="product-image"></div> <!-- controls image size -->
+        <div class="product-info">
+          <p>Product Name - $Price</p> <!-- editable text -->
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+
+    /* Products Page Background */
+    .products-page {
+      background: #d6c08a; /* overall background colour */
+      padding: 120px 40px; /* top space avoids navbar overlap */
+    }
+
+    /* Category Navigation */
+    .categories {
+      display: flex;
+      justify-content: center; /* centers categories horizontally */
+      gap: 80px; /* spacing between category items */
+      font-size: 1.8rem; /* size of category text */
+      margin-bottom: 50px; /* space between categories and grid */
+    }
+
+    /* Product Grid Layout */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns layout */
+      gap: 50px; /* space between products */
+      justify-items: center; /* centers items inside grid */
+    }
+
+    /* Individual Product Card */
+    .product-card {
+      width: 100%;
+      max-width: 250px; /* controls card width */
+      text-align: center;
+    }
+
+    /* Placeholder Image Box */
+    .product-image {
+      width: 100%;
+      height: 200px; /* controls image height */
+      background: #8b5e3c; /* brown placeholder */
+      margin-bottom: 15px; /* space between image and text */
+    }
+
+    /* Product Info Box */
+    .product-info {
+      background: #f3e4c4; /* light box behind text */
+      padding: 10px; /* space inside text box */
+      font-size: 1rem; /* text size */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1000px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+      }
+    }
+
+  </style>
+
 </body>
 </html>
