@@ -180,7 +180,7 @@
     <div class="products-grid">
 
       <!-- Product Item -->
-      <div class="product-card"> <!-- Below is each product item -->
+      <div class="product-card">
         <!-- Replace src with your actual image file in /assets -->
         <img src="assets/placeholder.jpg" class="product-image" alt="Product"> <!-- controls image size -->
         <div class="product-info">
@@ -201,32 +201,37 @@
           <p>Product Name - $Price</p>
         </div>
       </div>
- <!-- if you want another product box, just copy this from here -->
-      
+
       <div class="product-card">
         <img src="assets/placeholder.jpg" class="product-image" alt="Product">
         <div class="product-info">
           <p>Product Name - $Price</p>
         </div>
       </div>
-      
-<!-- To here -->
 
-       <div class="product-card">
-        <img src="assets/placeholder2.jpg" class="product-image" alt="Product">
+    </div>
+
+      <div class="product-card">
+        <div class="product-image"></div>
         <div class="product-info">
           <p>Product Name - $Price</p>
         </div>
       </div>
 
-       <div class="product-card">
-        <img src="assets/placeholder2.jpg" class="product-image" alt="Product">
+      <div class="product-card">
+        <div class="product-image"></div>
         <div class="product-info">
           <p>Product Name - $Price</p>
         </div>
       </div>
 
-      
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -295,6 +300,133 @@
     }
 
   </style>
+
+  <!-- Product Detail Page (separate page content example) -->
+  <section class="product-detail">
+    <div class="detail-container">
+
+      <!-- Left Content -->
+      <div class="detail-text">
+        <h1>Sakura Jade Wood Chopping board</h1> <!-- editable product name -->
+
+        <p class="description">
+          DESCRIPTION BOX HERE<br>
+          DESCRIPTION BOX HERE<br>
+          DESCRIPTION BOX HERE<br>
+          DESCRIPTION BOX HERE
+        </p>
+
+        <!-- Dropdown -->
+        <select class="dropdown">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </div>
+
+      <!-- Right Content -->
+      <div class="detail-images">
+        <img id="mainImage" src="assets/placeholder.jpg" class="main-image"> <!-- main image -->
+
+        <div class="thumbs">
+          <img src="assets/placeholder.jpg" onclick="changeImage(this)"> <!-- thumbnail 1 -->
+          <img src="assets/placeholder2.jpg" onclick="changeImage(this)"> <!-- thumbnail 2 -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+
+    /* Hover Effect on Product Cards */
+    .product-card img {
+      transition: 0.3s;
+    }
+
+    .product-card img:hover {
+      content: url('assets/placeholder2.jpg'); /* image swap on hover */
+    }
+
+    /* Clickable Cards */
+    .product-card {
+      cursor: pointer; /* shows clickable */
+    }
+
+    /* Product Detail Layout */
+    .product-detail {
+      background: #d6c08a;
+      padding: 120px 40px;
+    }
+
+    .detail-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px; /* space between text and images */
+    }
+
+    .detail-text {
+      max-width: 500px; /* controls width of text section */
+    }
+
+    .detail-text h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    /* Dropdown styling */
+    .dropdown {
+      padding: 10px;
+      width: 250px; /* controls dropdown width */
+    }
+
+    /* Image Section */
+    .detail-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-image {
+      width: 300px; /* main image size */
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .thumbs {
+      display: flex;
+      gap: 20px; /* space between thumbnails */
+    }
+
+    .thumbs img {
+      width: 60px; /* thumbnail size */
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+  </style>
+
+  <script>
+    /* Redirect on click */
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', () => {
+        window.location.href = 'product.html'; // redirect page
+      });
+    });
+
+    /* Change main image when thumbnail clicked */
+    function changeImage(element) {
+      document.getElementById('mainImage').src = element.src;
+    }
+  </script>
 
 </body>
 </html>
