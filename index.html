@@ -181,11 +181,35 @@
 
       <!-- Product Item -->
       <div class="product-card">
-        <div class="product-image"></div> <!-- controls image size -->
+        <!-- Replace src with your actual image file in /assets -->
+        <img src="assets/placeholder.jpg" class="product-image" alt="Product"> <!-- controls image size -->
         <div class="product-info">
           <p>Product Name - $Price</p> <!-- editable text -->
         </div>
       </div>
+
+      <div class="product-card">
+        <img src="assets/placeholder.jpg" class="product-image" alt="Product">
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/placeholder.jpg" class="product-image" alt="Product">
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/placeholder.jpg" class="product-image" alt="Product">
+        <div class="product-info">
+          <p>Product Name - $Price</p>
+        </div>
+      </div>
+
+    </div>
 
       <div class="product-card">
         <div class="product-image"></div>
@@ -196,7 +220,6 @@
 
       <div class="product-card">
         <div class="product-image"></div>
-        <img src="assets/placeholder.jpg" class="product-image">
         <div class="product-info">
           <p>Product Name - $Price</p>
         </div>
@@ -246,11 +269,15 @@
 
     /* Placeholder Image Box */
     .product-image {
-      width: 100%;
-      height: 200px; /* controls image height */
-      background: #8b5e3c; /* brown placeholder */
-      margin-bottom: 15px; /* space between image and text */
+      width: 100%;        /* makes image fill card width */
+      height: 200px;      /* controls image height */
+      object-fit: cover;  /* ensures image fills box without stretching */
+      margin-bottom: 15px;
     }
+
+    /* NOTE: Previously, the brown boxes were created by this property:
+       background: #8b5e3c;
+       This has now been removed because we are using real images instead. */
 
     /* Product Info Box */
     .product-info {
