@@ -212,25 +212,19 @@
     </div>
 
       <div class="product-card">
-        <div class="product-image"></div>
+        <img src="assets/placeholder2.jpg" class="product-image" alt="Product">
         <div class="product-info">
           <p>Product Name - $Price</p>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-image"></div>
+        <img src="assets/placeholder.jpg" class="product-image" alt="Product">
         <div class="product-info">
           <p>Product Name - $Price</p>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="product-image"></div>
-        <div class="product-info">
-          <p>Product Name - $Price</p>
-        </div>
-      </div>
 
     </div>
   </section>
@@ -262,6 +256,13 @@
 
     /* Individual Product Card */
     .product-card {
+      width: 100%;
+      max-width: 250px; /* controls card width */
+      text-align: center;
+    }
+
+     /* Individual Product Card */
+    .product-card2 {
       width: 100%;
       max-width: 250px; /* controls card width */
       text-align: center;
@@ -346,6 +347,10 @@
 
     .product-card img:hover {
       content: url('assets/placeholder2.jpg'); /* image swap on hover */
+    }
+
+    .product-card2 img:hover {
+      content: url('assets/placeholder.jpg'); /* image swap on hover */
     }
 
     /* Clickable Cards */
